@@ -1,0 +1,48 @@
+#
+# 	LENGUAJE DE PROGRAMACIÓN DE ALAN
+# 	PRUEBA DE IMPRESORA ESTÉTICA.
+#
+@EMPEZAR
+	#DECLARACION DE VARIABLES.
+	@VAR ^n1 ~> 1
+	@VAR ^n2 ~> -10
+	@VAR ^n3 ~> 0
+	#DECLARACION DE CONSTANTES.
+	@CONST ^PI ~> 3.1416
+
+	#DECLARACION DE VARIABLES DINAMICAS.
+	@VAR ^leido ~> ""
+
+	^leido ~> ?leer("Ingresa tu nombre: ")
+
+	#CONDICION SIMPLE
+	@SI (^n1 > 0):
+		?imprimir("hola")
+	@FIN_SI
+
+	#CONDICION SI - SI NO
+	@SI (^n2 > 1):
+		?imprimir("_n2 es mayor a 1")
+
+
+	@SI_NO:
+		?imprimir("_n2 es menor a 1")
+	@FIN_SI
+
+	#CICLO
+	@MIENTRAS (^n3 <= 4):
+		^n3 ~> ^n3+1
+	@FIN_MIENTRAS
+
+	?imprimir("Valor de _n3: ", ^n3)
+	?imprimir("Tu nombre es: ", ^leido)
+
+	#========= FUNCIONES =========
+	#
+	#	---- ENTRADA Y SALIDA ----
+	# 	?leer() - lee datos del teclado
+	# 	?imprimir(^cadena, ...) - imprime en pantalla
+	#	---- FUNCIONES PROPUESTAS ----
+	# 	?largo(^cadena) - obtiene el largo de una cadena.
+	#	?absoluto(^numero) - devuelve el valor absoluto de un numero.
+@FINALIZAR
